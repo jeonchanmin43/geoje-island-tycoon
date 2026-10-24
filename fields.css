@@ -1,0 +1,24 @@
+.field-scene{position:relative;overflow:hidden;margin:0 0 12px;padding:11px 12px 9px;border:1px solid rgba(190,219,182,.18);border-radius:13px;background:linear-gradient(180deg,#31584f,#203f3c 48%,#1c3836);box-shadow:0 10px 25px rgba(3,15,16,.13)}
+.field-scene:before{position:absolute;inset:0 0 auto;height:52px;content:"";background:linear-gradient(180deg,rgba(147,186,156,.16),transparent);pointer-events:none}
+.field-scene-heading,.field-scene-foot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between}
+.field-scene-heading{margin:0 1px 9px;color:#e6ebd4;font-size:9px;font-weight:700}
+.field-scene-heading span{display:flex;align-items:center;gap:6px}
+.field-scene-heading b{width:6px;height:6px;border-radius:50%;background:#b5d79b;box-shadow:0 0 8px rgba(181,215,155,.65)}
+.field-scene-heading small{color:#a4bcaa;font-size:8px;font-weight:400}
+.field-rows{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.field-plot{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;min-width:0;min-height:105px;padding:29px 5px 6px;overflow:hidden;border:1px solid rgba(232,238,198,.12);border-radius:8px 8px 13px 13px}
+.field-plot:before{position:absolute;inset:0 0 60%;content:"";background:linear-gradient(180deg,rgba(191,218,172,.19),rgba(171,205,160,.03))}
+.yuja-plot{background:linear-gradient(180deg,#456f59 0 40%,#675139 41%,#483c2d)}
+.shiitake-plot{background:linear-gradient(180deg,#526d5a 0 39%,#705741 40%,#45382e)}
+.aloe-plot{background:linear-gradient(180deg,#4d775b 0 39%,#6d593d 40%,#493d2e)}
+.bamboo-plot{background:linear-gradient(180deg,#4d7254 0 39%,#705a3b 40%,#493c2d)}
+.plot-label{position:absolute;z-index:2;top:6px;left:50%;max-width:calc(100% - 8px);padding:3px 6px;transform:translateX(-50%);overflow:hidden;border:1px solid rgba(239,238,204,.13);border-radius:20px;color:#f1ebc8;background:rgba(22,43,37,.62);font-size:7px;white-space:nowrap}
+.plant-bed{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;justify-items:center;min-height:20px;padding:1px 2px 0;border-radius:5px 5px 3px 3px;background:repeating-linear-gradient(180deg,rgba(38,30,24,.12) 0 4px,rgba(177,146,91,.18) 5px 7px);box-shadow:inset 0 1px 3px rgba(25,20,16,.2)}
+.plant-bed i{font-size:16px;font-style:normal;line-height:19px;filter:drop-shadow(0 2px 2px rgba(24,25,15,.36))}
+.shiitake-plot .plant-bed i{font-size:15px}
+.aloe-plot .plant-bed i{font-size:15px}
+.field-scene-foot{justify-content:center;gap:5px;margin-top:8px;color:#abc0aa;font-size:8px}
+.field-scene-foot span{color:#91c3b1;font-size:14px;line-height:8px}
+@media(max-width:680px){.field-scene{padding:10px}.field-rows{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.field-plot{min-height:97px}.plant-bed i{font-size:17px}}
+@media(max-width:420px){.field-scene{margin-bottom:9px;padding:9px}.field-scene-heading{font-size:8px}.field-scene-heading small{font-size:7px}.field-plot{min-height:90px}.plot-label{font-size:6px}.plant-bed i,.shiitake-plot .plant-bed i,.aloe-plot .plant-bed i{font-size:14px}}
+

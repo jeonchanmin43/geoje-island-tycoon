@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102b32" />
+  <title>거제 섬마을 타이쿤</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fields.css" />
+  <link rel="stylesheet" href="planting.css" />
+  <link rel="stylesheet" href="traits.css" />
+  <link rel="stylesheet" href="galaxy.css" />
+  <link rel="stylesheet" href="workshop.css" />
+  <link rel="stylesheet" href="fishing.css" />
+  <link rel="stylesheet" href="bosses.css" />
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="거제 섬마을 타이쿤 홈"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>GEOJE <em>ISLAND</em></span></a>
+      <div class="topbar-right">
+        <div class="wallet"><span class="wallet-icon">₩</span><div><small>보유 자금</small><strong id="money-value">₩8,000</strong></div></div>
+        <button class="icon-button" id="restart-button" type="button" aria-label="새 게임" title="새 게임"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4.8 9a7.5 7.5 0 0 1 12.6-2.7L20 9M4 17v-5h5m10.2 3a7.5 7.5 0 0 1-12.6 2.7L4 15" /></svg></button>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div class="eyebrow"><span></span> GEOJE ISLAND · LOCAL MARKET</div>
+      <h1>거제 섬마을 <em>타이쿤</em></h1>
+      <p>섬의 땅을 일구고, 거제의 작물을 키워 장승포 장터에 판매하세요.</p>
+    </section>
+
+    <section class="island-banner" aria-label="거제 섬마을">
+      <div class="banner-sun"></div><div class="banner-island island-back"></div><div class="banner-island island-front"></div>
+      <div class="banner-content"><span class="banner-label">오늘도 맑음 · 거제도</span><strong>바다 바람을 맞고 자라는<br />우리 섬의 작은 농장</strong><span class="banner-caption">수확하고, 판매하고, 농장을 키워보세요.</span></div>
+      <div class="banner-stamp"><span>GEOJE</span><b>섬마을</b><span>LOCAL FARM</span></div>
+    </section>
+
+    <section class="summary-grid" aria-label="마을 통계">
+      <article class="summary-card"><span>🏡</span><div><small>마을 등급</small><strong id="town-level">1</strong><em>섬마을 새내기</em></div></article>
+      <article class="summary-card"><span>📦</span><div><small>누적 판매</small><strong id="sold-units">0<i>개</i></strong><em>장터에 보낸 작물</em></div></article>
+      <article class="summary-card"><span>🌱</span><div><small>농장 규모</small><strong id="farm-levels">4<i>단계</i></strong><em>농장 성장 단계 합계</em></div></article>
+      <article class="summary-card"><span>💰</span><div><small>총 매출</small><strong id="total-earnings">₩0</strong><em>지금까지 판매한 금액</em></div></article>
+    </section>
+
+    <section class="game-layout">
+      <section class="farms-section" aria-labelledby="farms-title">
+        <div class="section-heading"><div><small>YOUR ISLAND</small><h2 id="farms-title">내 농장</h2><p>수확해 팔고, 업그레이드로 더 크게 키워요.</p></div><span class="auto-badge"><i></i> 5초마다 자동 생산</span></div>
+        <div class="field-scene" aria-label="유자, 표고버섯, 알로에, 죽순이 자라는 거제 농장">
+          <div class="field-scene-heading"><span><b></b> 거제 섬농장</span><small>네 가지 작물을 재배 중</small></div>
+          <div class="field-rows">
+            <div class="field-plot yuja-plot"><span class="plot-label">유자밭</span><div class="plant-bed"><i>🌳</i><i>🌳</i><i>🌳</i><i>🌳</i></div><div class="plant-bed"><i>🌳</i><i>🌳</i><i>🌳</i><i>🌳</i></div><div class="plant-bed"><i>🌳</i><i>🌳</i><i>🌳</i><i>🌳</i></div></div>
+            <div class="field-plot shiitake-plot"><span class="plot-label">표고 재배장</span><div class="plant-bed"><i>🍄</i><i>🍄</i><i>🍄</i><i>🍄</i></div><div class="plant-bed"><i>🍄</i><i>🍄</i><i>🍄</i><i>🍄</i></div><div class="plant-bed"><i>🍄</i><i>🍄</i><i>🍄</i><i>🍄</i></div></div>
+            <div class="field-plot aloe-plot"><span class="plot-label">알로에밭</span><div class="plant-bed"><i>🌿</i><i>🌿</i><i>🌿</i><i>🌿</i></div><div class="plant-bed"><i>🌿</i><i>🌿</i><i>🌿</i><i>🌿</i></div><div class="plant-bed"><i>🌿</i><i>🌿</i><i>🌿</i><i>🌿</i></div></div>
+            <div class="field-plot bamboo-plot"><span class="plot-label">죽순밭</span><div class="plant-bed"><i>🎋</i><i>🎋</i><i>🎋</i><i>🎋</i></div><div class="plant-bed"><i>🎋</i><i>🎋</i><i>🎋</i><i>🎋</i></div><div class="plant-bed"><i>🎋</i><i>🎋</i><i>🎋</i><i>🎋</i></div></div>
+          </div>
+          <div class="field-scene-foot"><span>〰</span> 바다 바람과 함께 자라는 섬마을 밭</div>
+        </div>
+        <div class="farm-grid" id="farm-grid">
+          <article class="farm-card yuja-card"><div class="farm-card-top"><div class="crop-art">🍋</div><span class="level-pill">LV <b id="level-yuja">1</b></span></div><div class="crop-heading"><div><small>ISLAND CITRUS</small><h3>유자</h3></div><span class="crop-stock"><strong id="stock-yuja">0</strong><small>보유</small></span></div><p>햇살 가득 머금은 거제 유자</p><div class="crop-details"><span>장터 시세</span><strong id="price-yuja">₩1,200</strong></div><div class="crop-details yield"><span>수확량</span><strong id="yield-yuja">1개 / 회</strong></div><div class="farm-actions"><button class="harvest-button" data-action="harvest" data-crop="yuja" type="button">수확하기 <b>↗</b></button><button class="upgrade-button" data-action="upgrade" data-crop="yuja" type="button"><span>농장 키우기</span><strong id="upgrade-cost-yuja">₩3,200</strong></button></div></article>
+          <article class="farm-card shiitake-card"><div class="farm-card-top"><div class="crop-art">🍄</div><span class="level-pill">LV <b id="level-shiitake">1</b></span></div><div class="crop-heading"><div><small>FOREST HARVEST</small><h3>표고버섯</h3></div><span class="crop-stock"><strong id="stock-shiitake">0</strong><small>보유</small></span></div><p>거제의 맑은 바람과 숲에서 키운 향긋한 표고</p><div class="crop-details"><span>장터 시세</span><strong id="price-shiitake">₩1,800</strong></div><div class="crop-details yield"><span>수확량</span><strong id="yield-shiitake">1개 / 회</strong></div><div class="farm-actions"><button class="harvest-button" data-action="harvest" data-crop="shiitake" type="button">수확하기 <b>↗</b></button><button class="upgrade-button" data-action="upgrade" data-crop="shiitake" type="button"><span>농장 키우기</span><strong id="upgrade-cost-shiitake">₩4,000</strong></button></div></article>
+          <article class="farm-card aloe-card"><div class="farm-card-top"><div class="crop-art">🌿</div><span class="level-pill">LV <b id="level-aloe">1</b></span></div><div class="crop-heading"><div><small>COASTAL GARDEN</small><h3>알로에</h3></div><span class="crop-stock"><strong id="stock-aloe">0</strong><small>보유</small></span></div><p>따뜻한 해풍을 맞고 자란 알로에</p><div class="crop-details"><span>장터 시세</span><strong id="price-aloe">₩950</strong></div><div class="crop-details yield"><span>수확량</span><strong id="yield-aloe">1개 / 회</strong></div><div class="farm-actions"><button class="harvest-button" data-action="harvest" data-crop="aloe" type="button">수확하기 <b>↗</b></button><button class="upgrade-button" data-action="upgrade" data-crop="aloe" type="button"><span>농장 키우기</span><strong id="upgrade-cost-aloe">₩2,800</strong></button></div></article>
+          <article class="farm-card bamboo-card"><div class="farm-card-top"><div class="crop-art">🎋</div><span class="level-pill">LV <b id="level-bamboo">1</b></span></div><div class="crop-heading"><div><small>SPRING SHOOTS</small><h3>죽순</h3></div><span class="crop-stock"><strong id="stock-bamboo">0</strong><small>보유</small></span></div><p>봄 흙내음 품은 아삭한 죽순</p><div class="crop-details"><span>장터 시세</span><strong id="price-bamboo">₩1,450</strong></div><div class="crop-details yield"><span>수확량</span><strong id="yield-bamboo">1개 / 회</strong></div><div class="farm-actions"><button class="harvest-button" data-action="harvest" data-crop="bamboo" type="button">수확하기 <b>↗</b></button><button class="upgrade-button" data-action="upgrade" data-crop="bamboo" type="button"><span>농장 키우기</span><strong id="upgrade-cost-bamboo">₩3,500</strong></button></div></article>
+        </div>
+        <section class="workshop-section" aria-labelledby="workshop-title">
+          <div class="section-heading workshop-heading"><div><small>ISLAND FOOD WORKSHOP</small><h2 id="workshop-title">음식 가공 공방</h2><p>수확한 작물을 음식으로 만들고 더 높은 값에 판매하세요.</p></div><span class="workshop-icon">🍳</span></div>
+          <div class="workshop-queue"><div class="queue-status"><strong id="workshop-status">공방 준비 완료</strong><span id="workshop-queue-count">대기 0/3</span></div><div class="workshop-track"><i id="workshop-progress"></i></div><div class="workshop-orders" id="workshop-orders"></div></div>
+          <div class="recipe-grid">
+            <article class="recipe-card" data-recipe="yujaZest"><div class="recipe-top"><span>🍋</span><div><small>거제 유자 가공</small><h3>유자제스트</h3></div></div><p>유자 1개 → 유자제스트 1팩</p><div class="recipe-bottom"><span>판매가 <b data-food-price="yujaZest">₩2,200</b> · 6초</span><button type="button" data-action="craft" data-recipe="yujaZest">제조</button></div><small class="recipe-stock">완성 <b id="food-yujaZest">0</b>팩</small></article>
+            <article class="recipe-card" data-recipe="mushroomPasta"><div class="recipe-top"><span>🍝</span><div><small>섬 특선 파스타</small><h3>포고버섯 파스타</h3></div></div><p>표고버섯 2개 + 유자 1개 → 1접시</p><div class="recipe-bottom"><span>판매가 <b data-food-price="mushroomPasta">₩6,900</b> · 14초</span><button type="button" data-action="craft" data-recipe="mushroomPasta">제조</button></div><small class="recipe-stock">완성 <b id="food-mushroomPasta">0</b>접시</small></article>
+            <article class="recipe-card" data-recipe="yujaFinancier"><div class="recipe-top"><span>🧁</span><div><small>유자 디저트</small><h3>유자 휘낭시에</h3></div></div><p>유자 2개 → 유자 휘낭시에 1개</p><div class="recipe-bottom"><span>판매가 <b data-food-price="yujaFinancier">₩4,100</b> · 12초</span><button type="button" data-action="craft" data-recipe="yujaFinancier">제조</button></div><small class="recipe-stock">완성 <b id="food-yujaFinancier">0</b>개</small></article>
+            <article class="recipe-card" data-recipe="bambooRice"><div class="recipe-top"><span>🍚</span><div><small>봄철 섬 밥상</small><h3>죽순밥</h3></div></div><p>죽순 2개 + 표고버섯 1개 → 1그릇</p><div class="recipe-bottom"><span>판매가 <b data-food-price="bambooRice">₩6,200</b> · 10초</span><button type="button" data-action="craft" data-recipe="bambooRice">제조</button></div><small class="recipe-stock">완성 <b id="food-bambooRice">0</b>그릇</small></article>
+            <article class="recipe-card" data-recipe="yujaAde"><div class="recipe-top"><span>🥤</span><div><small>장승포 바다 음료</small><h3>유자에이드</h3></div></div><p>유자 1개 + 알로에 1개 → 1잔</p><div class="recipe-bottom"><span>판매가 <b data-food-price="yujaAde">₩3,200</b> · 8초</span><button type="button" data-action="craft" data-recipe="yujaAde">제조</button></div><small class="recipe-stock">완성 <b id="food-yujaAde">0</b>잔</small></article>
+          </div>
+        </section>
+        <section class="boss-section" aria-labelledby="boss-title">
+          <div class="section-heading boss-heading"><div><small>FOUR GUARDIANS</small><h2 id="boss-title">사신수 보스전</h2><p>보스를 물리치면 10분 동안 유지되는 버프를 얻어요.</p></div><span class="boss-heading-icon">🐉</span></div>
+          <div class="boss-battle" id="boss-battle" hidden aria-live="polite">
+            <div class="boss-battle-heading"><div><small id="battle-element">보스 전투</small><strong id="battle-boss-name">보스</strong></div><span class="boss-player-stats" id="battle-player-stats">공격력 48</span><button class="boss-retreat-button" id="boss-retreat-button" type="button">후퇴</button></div>
+            <div class="boss-health"><div><span>보스 체력</span><b id="boss-hp-label">0 / 0</b></div><div class="boss-health-track"><i id="boss-hp-bar"></i></div></div>
+            <div class="boss-health player-health"><div><span>내 체력</span><b id="player-hp-label">100 / 100</b></div><div class="boss-health-track"><i id="player-hp-bar"></i></div></div>
+            <p class="boss-battle-log" id="boss-battle-log">공격 버튼을 눌러 전투를 시작하세요.</p>
+            <button class="boss-attack-button" id="boss-attack-button" type="button">⚔️ 공격하기</button>
+          </div>
+          <p class="boss-status" id="boss-status">보스를 선택해 도전하세요. 전투는 공격할 때마다 서로 한 번씩 행동해요.</p>
+          <div class="boss-grid" id="boss-grid"></div>
+          <div class="boss-buff-summary"><strong>수호자의 축복</strong><div class="boss-buffs" id="boss-buffs"></div></div>
+        </section>
+      </section>
+
+      <aside class="market-column">
+        <section class="market-card shop-card"><div class="market-card-heading"><div><small>ISLAND SUPPLY SHOP</small><h2>농자재 상점</h2></div><span>🛒</span></div><p class="shop-intro">씨앗을 사고 빈 밭에 심어보세요.</p><div class="shop-list">
+          <div class="shop-item"><span class="shop-crop">🍋</span><div><strong>유자 묘목</strong><small><b id="seed-yuja">2</b>개 보유 · <i id="seed-price-yuja">₩400</i></small></div><button type="button" data-action="buy-seed" data-crop="yuja">구매</button></div>
+          <div class="shop-item"><span class="shop-crop">🍄</span><div><strong>표고 종균</strong><small><b id="seed-shiitake">2</b>개 보유 · <i id="seed-price-shiitake">₩650</i></small></div><button type="button" data-action="buy-seed" data-crop="shiitake">구매</button></div>
+          <div class="shop-item"><span class="shop-crop">🌿</span><div><strong>알로에 모종</strong><small><b id="seed-aloe">2</b>개 보유 · <i id="seed-price-aloe">₩300</i></small></div><button type="button" data-action="buy-seed" data-crop="aloe">구매</button></div>
+          <div class="shop-item"><span class="shop-crop">🎋</span><div><strong>죽순 뿌리</strong><small><b id="seed-bamboo">2</b>개 보유 · <i id="seed-price-bamboo">₩500</i></small></div><button type="button" data-action="buy-seed" data-crop="bamboo">구매</button></div>
+        </div></section>
+        <section class="market-card demand-card"><div class="market-card-heading"><div><small>JANGSEUNGPO MARKET</small><h2>오늘의 장터</h2></div><span>☀</span></div><div class="demand-content"><div id="demand-icon">🍋</div><div><small>지금 인기 작물</small><strong id="demand-name">유자</strong><em>판매가 <b>25% UP</b></em></div></div><div class="demand-timer"><span>특가 종료까지</span><strong id="demand-countdown">25초</strong></div><div class="timer-track"><i id="demand-progress"></i></div></section>
+        <section class="market-card fishing-card" aria-labelledby="fishing-title"><div class="market-card-heading"><div><small>JANGSEUNGPO HARBOR</small><h2 id="fishing-title">거제 바다 낚시</h2></div><span>🎣</span></div><p class="fishing-intro">장승포 앞바다에서 낚시해 물고기를 잡아보세요. 잡은 물고기는 수확 바구니에 담겨 함께 판매돼요.</p><button class="fishing-button" id="fish-button" type="button"><span>🎣 낚시하기</span><small>바구니 여유 공간 필요</small></button><div class="fish-list" id="fish-list" aria-label="물고기 출현 확률과 보유량"></div></section>
+        <section class="market-card"><div class="market-card-heading"><div><small>HARVEST BASKET</small><h2>수확 바구니</h2></div><span>🧺</span></div><div class="storage-count"><strong id="storage-count">0</strong><span>/ 180개</span></div><div class="storage-track"><i id="storage-progress"></i></div><p class="storage-caption">바구니가 가득 차기 전에 장터에 판매하세요.</p><button class="sell-button" id="sell-button" type="button"><span>장터에 모두 판매</span><strong id="sell-value">₩0</strong></button></section>
+        <section class="market-card"><div class="market-card-heading"><div><small>TOWN GROWTH</small><h2>섬마을 성장</h2></div><span>🏝️</span></div><div class="town-level-row"><span>마을 레벨 <b id="town-level-inline">1</b></span><span id="town-progress-label">₩0 / ₩25,000</span></div><div class="town-track"><i id="town-progress"></i></div><p id="town-caption">첫 판매를 시작해 섬마을을 키워보세요.</p></section>
+        <section class="market-card activity-card"><div class="market-card-heading"><div><small>ISLAND JOURNAL</small><h2>오늘의 기록</h2></div><span>✎</span></div><ul id="activity-list" aria-live="polite"></ul></section>
+      </aside>
+    </section>
+    <footer class="page-footer"><span>GEOJE ISLAND TYCOON</span><span>바다와 함께 자라는 작은 농장</span></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+</body>
+</html>

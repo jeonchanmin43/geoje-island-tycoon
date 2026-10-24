@@ -1,0 +1,41 @@
+.boss-section{margin-top:16px;padding:14px;border:1px solid rgba(219,155,113,.17);border-radius:13px;background:linear-gradient(145deg,rgba(57,48,48,.88),rgba(28,43,48,.98));box-shadow:0 10px 25px rgba(3,15,16,.11)}
+.boss-heading{align-items:center;margin:0 0 11px}
+.boss-heading h2{font-size:16px}
+.boss-heading-icon{display:grid;place-items:center;width:39px;height:39px;border:1px solid rgba(226,156,115,.2);border-radius:11px;color:#f0c28f;background:rgba(205,123,82,.09);font-size:21px}
+.boss-status{margin:0 0 10px;color:#a5b2a8;font-size:8px;line-height:1.6}
+.boss-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.boss-card{min-width:0;padding:10px;border:1px solid rgba(214,231,207,.09);border-radius:9px;background:rgba(6,21,24,.28);transition:border-color .2s,background .2s}
+.boss-card-active{border-color:rgba(230,168,105,.5);background:rgba(107,73,46,.17)}
+.boss-card-buffed{border-color:rgba(135,190,143,.3);background:rgba(57,92,62,.15)}
+.boss-card-top{display:flex;align-items:center;gap:8px;min-height:38px}
+.boss-card-icon{display:grid;place-items:center;width:34px;height:34px;flex:0 0 auto;border:1px solid rgba(230,206,166,.1);border-radius:9px;background:rgba(220,184,130,.07);font-size:20px}
+.boss-card-top small{display:block;color:#8fa397;font-size:7px}
+.boss-card-top h3{margin:2px 0 0;color:#f0eddb;font-size:11px;line-height:1.3}
+.boss-card-buff{min-height:23px;margin:8px 0 6px;color:#c3c49e;font-size:7px;line-height:1.5}
+.boss-card-stats{display:block;margin-bottom:6px;color:#a98773;font:7px var(--mono)}
+.boss-card-status{display:block;margin-bottom:6px;color:#8fa296;font-size:7px}
+.boss-card-buffed .boss-card-status{color:#a7d0a5}
+.boss-challenge-button{width:100%;min-height:28px;border:1px solid rgba(222,171,116,.2);border-radius:6px;color:#eeddb9;background:rgba(207,153,94,.1);font-size:8px;font-weight:700;cursor:pointer;transition:filter .15s,opacity .15s}
+.boss-challenge-button:hover:not(:disabled),.boss-attack-button:hover:not(:disabled){filter:brightness(1.14)}
+.boss-challenge-button:disabled{cursor:not-allowed;opacity:.42}
+.boss-battle{margin:0 0 11px;padding:11px;border:1px solid rgba(227,162,107,.28);border-radius:10px;background:linear-gradient(145deg,rgba(69,50,43,.45),rgba(11,29,32,.45))}
+.boss-battle-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:11px}
+.boss-battle-heading small{display:block;color:#b49f83;font-size:7px}
+.boss-battle-heading strong{display:block;margin-top:3px;color:#f3e8d3;font-size:13px}
+.boss-player-stats{margin-left:auto;color:#e4c58b;font:8px var(--mono);white-space:nowrap}
+.boss-retreat-button{padding:5px 8px;border:1px solid rgba(214,231,207,.12);border-radius:6px;color:#b2bdb0;background:rgba(7,24,26,.35);font-size:7px;cursor:pointer}
+.boss-health{margin-top:8px}
+.boss-health>div:first-child{display:flex;justify-content:space-between;gap:7px;margin-bottom:4px;color:#aeb9ad;font-size:7px}
+.boss-health>div:first-child b{color:#e4ded0;font:8px var(--mono)}
+.boss-health-track{height:6px;overflow:hidden;border-radius:8px;background:rgba(0,0,0,.35)}
+.boss-health-track i{display:block;width:100%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#b94f48,#e0845b);transition:width .25s}
+.player-health .boss-health-track i{background:linear-gradient(90deg,#4f9a8c,#a5d08f)}
+.boss-battle-log{min-height:21px;margin:9px 0;color:#c7bba5;font-size:8px;line-height:1.5}
+.boss-attack-button{width:100%;min-height:35px;border:1px solid rgba(230,166,108,.4);border-radius:7px;color:#30271e;background:linear-gradient(100deg,#d9a66e,#e8c582);font-size:9px;font-weight:800;cursor:pointer}
+.boss-buff-summary{margin-top:11px;padding-top:9px;border-top:1px solid rgba(214,231,207,.08)}
+.boss-buff-summary>strong{display:block;margin-bottom:6px;color:#d5d5b5;font-size:8px}
+.boss-buffs{display:flex;flex-wrap:wrap;gap:5px}
+.boss-buff-empty{color:#899b90;font-size:7px}
+.boss-buff-tag{padding:4px 6px;border:1px solid rgba(134,187,135,.17);border-radius:12px;color:#c4d5ad;background:rgba(117,171,124,.08);font-size:7px;line-height:1.4}
+.boss-battle[hidden]{display:none}
+@media(max-width:420px){.boss-section{padding:10px}.boss-card{padding:8px}.boss-card-icon{width:29px;height:29px;font-size:17px}.boss-card-top{gap:6px}.boss-card-top h3{font-size:10px}.boss-card-buff{font-size:6px}.boss-buff-tag{font-size:6px}.boss-battle-heading{flex-wrap:wrap}.boss-player-stats{margin-left:auto}}
